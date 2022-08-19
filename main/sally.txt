@@ -1,0 +1,102 @@
+adfasdfasdf
+asdfasjdfkasjdfk
+
+Asdfajsdfajsdfklj
+Asdfasdfasdf
+Jasdfasdfasdf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 10.6.0.1
+!         
+access-list 101 permit tcp any any eq www
+access-list 101 permit tcp any any eq 443
+access-list 101 permit udp any 0.0.0.0 255.255.255.0
+access-list 101 permit udp any any eq domain
+access-list 101 permit udp any eq domain any
+!         
+!
+!         
+!
+route-map netskope permit 5
+ match ip address 101
+ set interface Tunnel1 Tunnel2
+!
+!         
+!
+!         
+!
+control-plane
+!
+!         
+!
+!         
+mgcp profile default
+!         
+!
+!         
+!
+!         
+line con 0
+line 1    
+ modem InOut
+ stopbits 1
+ speed 115200
+ flowcontrol hardware
+line aux 0
+line vty 0 4
+ password larry
+ transport input ssh
+line vty 5 15
+ transport input ssh
+!
+end       
+
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
+monmouthrtr#
